@@ -42,21 +42,21 @@ export function Roadmap() {
     }, [mouseX, mouseY]);
 
     return (
-        <section ref={containerRef} className="py-20 px-4 md:px-10 relative bg-stone-900 text-stone-100 overflow-hidden cursor-none">
+        <section ref={containerRef} className="py-20 px-4 md:px-10 relative bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-stone-100 overflow-hidden cursor-none transition-colors duration-700">
             <h2 className="font-display font-black text-6xl md:text-8xl mb-20 uppercase">Roadmap <span className="text-neon-lime">Process</span></h2>
 
-            <div className="flex flex-col gap-0 border-t border-stone-700">
+            <div className="flex flex-col gap-0 border-t border-stone-300 dark:border-stone-700 transition-colors duration-700">
                 {phases.map((phase) => (
                     <div
                         key={phase.id}
                         onMouseEnter={() => setHoveredPhase(phase.id)}
                         onMouseLeave={() => setHoveredPhase(null)}
-                        className="group relative border-b border-stone-700 py-10 px-4 hover:bg-stone-800 transition-colors duration-300"
+                        className="group relative border-b border-stone-300 dark:border-stone-700 py-10 px-4 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors duration-300"
                     >
                         <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
-                            <span className="font-display font-bold text-4xl text-stone-500 group-hover:text-neon-lime transition-colors">0{phase.id}</span>
+                            <span className="font-display font-bold text-4xl text-stone-400 dark:text-stone-500 group-hover:text-neon-lime transition-colors">0{phase.id}</span>
                             <h3 className="font-display font-bold text-4xl md:text-6xl uppercase">{phase.title}</h3>
-                            <p className="font-body text-sm md:text-base max-w-md text-stone-400 group-hover:text-stone-200">{phase.description}</p>
+                            <p className="font-body text-sm md:text-base max-w-md text-stone-600 dark:text-stone-400 group-hover:text-stone-900 dark:group-hover:text-stone-200">{phase.description}</p>
                         </div>
                     </div>
                 ))}

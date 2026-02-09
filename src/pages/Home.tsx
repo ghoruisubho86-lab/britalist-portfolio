@@ -19,7 +19,7 @@ export function Home() {
             <div className="py-20 flex justify-center bg-stone-100 dark:bg-stone-950">
                 <Link
                     to="/work"
-                    className="font-display text-4xl uppercase border-b-2 border-current hover:text-neon-lime hover:border-neon-lime transition-colors"
+                    className="font-display text-4xl uppercase border-b-2 border-current hover:text-neon-lime-dark dark:hover:text-neon-lime hover:border-neon-lime-dark dark:hover:border-neon-lime transition-colors"
                 >
                     View All Work
                 </Link>

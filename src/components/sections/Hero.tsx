@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { GlassCrystal } from '../3d/GlassCrystal';
 
 export function Hero() {
     const ref = useRef<HTMLDivElement>(null);
@@ -10,6 +11,7 @@ export function Hero() {
 
     return (
         <section ref={ref} className="h-screen w-full relative flex flex-col justify-center items-center overflow-hidden bg-transparent">
+            <GlassCrystal />
             <motion.div
                 style={{ y, opacity }}
                 className="z-10 mix-blend-exclusion text-white text-center pointer-events-none flex flex-col items-center"
@@ -17,7 +19,7 @@ export function Hero() {
                 <h1 className="font-display font-black text-[15vw] leading-[0.8] tracking-tighter uppercase whitespace-nowrap">
                     CREATIVE
                 </h1>
-                <h1 className="font-display font-black text-[15vw] leading-[0.8] tracking-tighter uppercase text-transparent stroke-white stroke-2" style={{ WebkitTextStroke: "2px white" }}>
+                <h1 className="font-display font-black text-[15vw] leading-[0.8] tracking-tighter uppercase text-transparent stroke-stone-900 dark:stroke-white stroke-2 transition-colors duration-700" style={{ WebkitTextStroke: "2px currentColor" }}>
                     DESIGNER
                 </h1>
             </motion.div>
@@ -26,7 +28,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 1 }}
-                className="absolute bottom-10 left-10 md:left-20 flex flex-col items-start gap-2 mix-blend-difference text-white font-body text-xs md:text-sm tracking-wide uppercase border-l-2 border-white pl-4"
+                className="absolute bottom-10 left-10 md:left-20 flex flex-col items-start gap-2 text-stone-900 dark:text-white font-body text-xs md:text-sm tracking-wide uppercase border-l-2 border-stone-900 dark:border-white pl-4 transition-colors duration-700"
             >
                 <span className="font-bold">Subo.Design</span>
                 <span>Frontend • UI/UX • Motion</span>

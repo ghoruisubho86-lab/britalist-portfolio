@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ProjectModal } from '../ui/ProjectModal';
 
 const projects = [
@@ -8,14 +8,14 @@ const projects = [
         category: "Branding",
         img: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2400&auto=format&fit=crop",
         year: "2023",
-        color: "bg-stone-200 text-stone-900"
+        color: "bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100"
     },
     {
         title: "Neon Nexus",
         category: "Web Design",
         img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2400&auto=format&fit=crop",
         year: "2024",
-        color: "bg-stone-900 text-stone-100"
+        color: "bg-stone-900 dark:bg-black text-stone-100 dark:text-stone-300"
     },
     {
         title: "Void Scape",
@@ -29,7 +29,7 @@ const projects = [
         category: "3D Art",
         img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2400&auto=format&fit=crop",
         year: "2025",
-        color: "bg-stone-400 text-stone-900"
+        color: "bg-stone-400 dark:bg-stone-700 text-stone-900 dark:text-stone-100"
     }
 ];
 
@@ -48,9 +48,9 @@ function Card({ i, project, progress, range, targetScale, onClick }: any) {
             <motion.div
                 style={{ scale, top: `calc(-5vh + ${i * 25}px)` }}
                 onClick={() => onClick(project)}
-                className={`relative flex flex-col w-full md:w-[95vw] h-[80vh] rounded-none border border-stone-500 origin-top cursor-pointer overflow-hidden ${project.color}`}
+                className={`relative flex flex-col w-full md:w-[95vw] h-[80vh] rounded-none border border-stone-400 dark:border-stone-600 origin-top cursor-pointer overflow-hidden ${project.color}`}
             >
-                <div className="flex justify-between items-center p-8 md:p-12 border-b border-stone-500/20">
+                <div className="flex justify-between items-center p-8 md:p-12 border-b border-stone-400/20 dark:border-stone-600/20">
                     <h2 className="font-display font-black text-4xl md:text-6xl uppercase text-center">{project.title}</h2>
                     <span className="font-body text-xl opacity-60">({project.year})</span>
                 </div>
@@ -82,7 +82,7 @@ export function Gallery() {
     return (
         <>
             <section ref={container} className="mt-[20vh] mb-[20vh] px-4">
-                <h1 className="font-display font-black text-[15vw] leading-none text-center sticky top-10 mix-blend-difference text-white z-0 mb-20 pointer-events-none opacity-50">
+                <h1 className="font-display font-black text-[15vw] leading-none text-center sticky top-10 text-stone-200 dark:text-stone-800 z-0 mb-20 pointer-events-none opacity-50 transition-colors duration-700">
                     WORK
                 </h1>
                 {projects.map((project, i) => {

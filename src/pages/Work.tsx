@@ -1,5 +1,6 @@
 import { Gallery } from '../components/sections/Gallery';
 import { Contact } from '../components/sections/Contact';
+import { Vault } from '../components/sections/Vault';
 
 export function Work() {
     return (
@@ -8,6 +9,7 @@ export function Work() {
                 <h1 className="font-display font-black text-6xl md:text-9xl uppercase">Selected<br />Works</h1>
             </div>
             <Gallery />
+            <Vault />
             <Contact />
         </div>
     );

@@ -10,9 +10,9 @@ const tiers = [
         period: "/project",
         description: "One-off project or feature. Fast & furious.",
         features: ["Design & Dev", "1 week turnaround", "2 revisions", "Source files"],
-        color: "bg-stone-200 text-stone-900",
-        hoverColor: "hover:bg-stone-300",
-        activeBorder: "border-stone-400"
+        color: "bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100",
+        hoverColor: "hover:bg-stone-300 dark:hover:bg-stone-700",
+        activeBorder: "border-stone-400 dark:border-stone-500"
     },
     {
         id: 'retainer',
@@ -32,9 +32,9 @@ const tiers = [
         period: "",
         description: "Full-scale product design & development system.",
         features: ["Design System", "Full Stack Dev", "Strategy", "Long-term"],
-        color: "bg-stone-900 text-stone-100",
-        hoverColor: "hover:bg-stone-800",
-        activeBorder: "border-stone-600"
+        color: "bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-stone-100",
+        hoverColor: "hover:bg-stone-200 dark:hover:bg-stone-800",
+        activeBorder: "border-stone-300 dark:border-stone-600"
     }
 ];
 
