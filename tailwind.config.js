@@ -14,8 +14,8 @@ export default {
             colors: {
                 'brutal-black': '#1a1a1a',
                 'brutal-white': '#f5f5f5',
-                'neon-lime': '#ccff00',
-                'neon-lime-dark': '#5c7400', // Darker shade for text on light backgrounds
+                'neon-lime': '#fe0000', // Now Neon Red
+                'neon-lime-dark': '#990000', // Darker red for contrast
             }
         },
     },

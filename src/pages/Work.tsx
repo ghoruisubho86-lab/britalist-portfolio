@@ -1,6 +1,6 @@
 import { Gallery } from '../components/sections/Gallery';
-import { Contact } from '../components/sections/Contact';
 import { Vault } from '../components/sections/Vault';
+import { Footer } from '../components/layout/Footer';
 
 export function Work() {
     return (
@@ -10,7 +10,7 @@ export function Work() {
             </div>
             <Gallery />
             <Vault />
-            <Contact />
+            <Footer />
         </div>
     );
 }

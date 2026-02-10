@@ -1,11 +1,11 @@
 import { Hero } from '../components/sections/Hero';
 import { Roadmap } from '../components/sections/Roadmap';
-import { Contact } from '../components/sections/Contact';
 import { Pricing } from '../components/sections/Pricing';
 import { Testimonials } from '../components/sections/Testimonials';
 import { FAQ } from '../components/sections/FAQ';
 import { ScheduleCall } from '../components/sections/ScheduleCall';
 import { Link } from 'react-router-dom';
+import { Footer } from '../components/layout/Footer';
 
 export function Home() {
     return (
@@ -24,7 +24,7 @@ export function Home() {
                     View All Work
                 </Link>
             </div>
-            <Contact />
+            <Footer />
         </div>
     );
 }

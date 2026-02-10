@@ -33,7 +33,7 @@ export function Navbar() {
             >
                 <Magnetic>
                     <Link to="/" className="block font-display font-bold text-2xl tracking-tighter uppercase pointer-events-auto cursor-pointer p-2 relative z-50">
-                        SUBO.DESIGN
+                        Grainy Grids
                     </Link>
                 </Magnetic>
 
@@ -46,7 +46,7 @@ export function Navbar() {
                         <Link to="/about" className="block p-2 hover:text-neon-lime transition-colors">About</Link>
                     </Magnetic>
                     <Magnetic>
-                        <a href="#contact" className="block p-2 hover:text-neon-lime transition-colors">Contact</a>
+                        <Link to="/contact" className="block p-2 hover:text-neon-lime transition-colors">Contact</Link>
                     </Magnetic>
                 </div>
 
@@ -69,7 +69,7 @@ export function Navbar() {
                         <Link to="/" onClick={toggleMenu} className="font-display font-black text-4xl uppercase hover:text-neon-lime transition-colors">Home</Link>
                         <Link to="/work" onClick={toggleMenu} className="font-display font-black text-4xl uppercase hover:text-neon-lime transition-colors">Work</Link>
                         <Link to="/about" onClick={toggleMenu} className="font-display font-black text-4xl uppercase hover:text-neon-lime transition-colors">About</Link>
-                        <a href="#contact" onClick={toggleMenu} className="font-display font-black text-4xl uppercase hover:text-neon-lime transition-colors">Contact</a>
+                        <Link to="/contact" onClick={toggleMenu} className="font-display font-black text-4xl uppercase hover:text-neon-lime transition-colors">Contact</Link>
                     </motion.div>
                 )}
             </AnimatePresence>

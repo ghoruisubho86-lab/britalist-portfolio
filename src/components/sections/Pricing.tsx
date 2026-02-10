@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { BookingModal } from '../ui/BookingModal';
 
 const tiers = [
     {
         id: 'sprint',
-        name: "Sprint",
+        name: "Blitz",
         price: "2.5k",
         period: "/project",
-        description: "One-off project or feature. Fast & furious.",
+        description: "High-velocity execution. In and out before they know what hit them.",
         features: ["Design & Dev", "1 week turnaround", "2 revisions", "Source files"],
         color: "bg-stone-200 dark:bg-stone-800 text-stone-900 dark:text-stone-100",
         hoverColor: "hover:bg-stone-300 dark:hover:bg-stone-700",
@@ -16,10 +17,10 @@ const tiers = [
     },
     {
         id: 'retainer',
-        name: "Retainer",
+        name: "Partner",
         price: "5k",
         period: "/month",
-        description: "Dedicated design partner for your growing startup.",
+        description: "Your design warfare ally. We fight in the trenches together.",
         features: ["Unlimited requests", "Slack priority", "48h delivery", "Cancel anytime"],
         color: "bg-neon-lime text-stone-900",
         hoverColor: "hover:bg-neon-lime/80",
@@ -27,10 +28,10 @@ const tiers = [
     },
     {
         id: 'system',
-        name: "System",
+        name: "Empire",
         price: "Custom",
         period: "",
-        description: "Full-scale product design & development system.",
+        description: "Total domination. Full-scale digital ecosystems.",
         features: ["Design System", "Full Stack Dev", "Strategy", "Long-term"],
         color: "bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-stone-100",
         hoverColor: "hover:bg-stone-200 dark:hover:bg-stone-800",
@@ -40,6 +41,7 @@ const tiers = [
 
 export function Pricing() {
     const [activeId, setActiveId] = useState<string | null>('retainer');
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <section className="py-32 px-4 md:px-10 border-t border-current min-h-[800px] flex flex-col">
@@ -95,7 +97,13 @@ export function Pricing() {
                                             ))}
                                         </ul>
 
-                                        <button className="w-full py-4 bg-black text-white dark:bg-white dark:text-black font-display font-bold uppercase tracking-widest hover:scale-[1.02] transition-transform">
+                                        <button
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setIsModalOpen(true);
+                                            }}
+                                            className="w-full py-4 bg-black text-white dark:bg-white dark:text-black font-display font-bold uppercase tracking-widest hover:scale-[1.02] transition-transform"
+                                        >
                                             Select Plan
                                         </button>
                                     </motion.div>
@@ -105,6 +113,8 @@ export function Pricing() {
                     </motion.div>
                 ))}
             </div>
+
+            <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </section>
     );
 }

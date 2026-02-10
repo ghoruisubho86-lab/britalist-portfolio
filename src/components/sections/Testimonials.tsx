@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 
 const reviews = [
-    "Subo transformed our vague idea into a digital masterpiece. The brutalist approach turned heads.",
-    "Fast, precise, and dangerously creative. The best investment we made this year.",
-    "Not for the faint of heart. If you want to stand out, this is the way.",
-    "The 3D interactions are smooth as butter. Absolutely stunning work.",
-    "A true digital alchemist. He turned our boring corporate site into art.",
-    "Subo transformed our vague idea into a digital masterpiece. The brutalist approach turned heads.",
+    "Visceral. Unapologetic. Exactly what we needed to break the mold.",
+    "Dangerous levels of creativity. The ROI was immediate.",
+    "Not for the safe players. If you want to dominate, this is it.",
+    "Digital alchemy at its finest. Turned our rough concepts into gold.",
+    "A visual assault in the best way possible. Pure impact.",
+    "Visceral. Unapologetic. Exactly what we needed to break the mold.",
 ];
 
 export function Testimonials() {

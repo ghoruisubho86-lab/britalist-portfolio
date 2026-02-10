@@ -9,14 +9,32 @@ import { SlideTransition } from './components/layout/PageTransition';
 import { Home } from './pages/Home';
 import { Work } from './pages/Work';
 import { About } from './pages/About';
+import { ContactPage } from './pages/ContactPage';
 import { AnimatePresence } from 'framer-motion';
+
+import { useState, useEffect } from 'react';
+import { Loader } from './components/ui/Loader';
+
+// ... imports ...
 
 function AppContent() {
     const location = useLocation();
     const { theme } = useTheme();
+    const [loading, setLoading] = useState(true);
+
+    // Initial load simulation or check
+    useEffect(() => {
+        // You could check multiple assets here if needed
+        // For now, the Loader component handles its own timing
+    }, []);
 
     return (
         <SmoothScroll>
+            {loading && <Loader onComplete={() => {
+                window.scrollTo(0, 0);
+                setLoading(false);
+            }} />}
+
             <div className={`relative w-full min-h-screen transition-colors duration-700 ${theme === 'dark' ? 'bg-stone-950 text-stone-50' : 'bg-stone-100 text-stone-900'}`}>
 
                 <CustomCursor />
@@ -28,6 +46,7 @@ function AppContent() {
                         <Route path="/" element={<SlideTransition><Home /></SlideTransition>} />
                         <Route path="/work" element={<SlideTransition><Work /></SlideTransition>} />
                         <Route path="/about" element={<SlideTransition><About /></SlideTransition>} />
+                        <Route path="/contact" element={<SlideTransition><ContactPage /></SlideTransition>} />
                     </Routes>
                 </AnimatePresence>
 
@@ -40,7 +59,7 @@ function AppContent() {
 
 function App() {
     return (
-        <Router>
+        <Router basename="/britalist-portfolio">
             <AppContent />
         </Router>
     );

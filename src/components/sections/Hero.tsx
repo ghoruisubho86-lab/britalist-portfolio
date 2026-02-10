@@ -17,10 +17,10 @@ export function Hero() {
                 className="z-10 mix-blend-exclusion text-white text-center pointer-events-none flex flex-col items-center"
             >
                 <h1 className="font-display font-black text-[15vw] leading-[0.8] tracking-tighter uppercase whitespace-nowrap">
-                    CREATIVE
+                    DIGITAL
                 </h1>
-                <h1 className="font-display font-black text-[15vw] leading-[0.8] tracking-tighter uppercase text-transparent stroke-stone-900 dark:stroke-white stroke-2 transition-colors duration-700" style={{ WebkitTextStroke: "2px currentColor" }}>
-                    DESIGNER
+                <h1 className="font-display font-black text-[15vw] leading-[0.8] tracking-tighter uppercase text-stone-900 dark:text-white stroke-2 transition-colors duration-700" style={{ WebkitTextStroke: "2px currentColor", WebkitTextFillColor: "transparent" }}>
+                    ANARCHIST
                 </h1>
             </motion.div>
 
@@ -30,8 +30,8 @@ export function Hero() {
                 transition={{ delay: 1, duration: 1 }}
                 className="absolute bottom-10 left-10 md:left-20 flex flex-col items-start gap-2 text-stone-900 dark:text-white font-body text-xs md:text-sm tracking-wide uppercase border-l-2 border-stone-900 dark:border-white pl-4 transition-colors duration-700"
             >
-                <span className="font-bold">Subo.Design</span>
-                <span>Frontend • UI/UX • Motion</span>
+                <span className="font-bold">Grainy Grids</span>
+                <span>Forging digital chaos into order</span>
                 <span>Based in Kolkata</span>
             </motion.div>
 
