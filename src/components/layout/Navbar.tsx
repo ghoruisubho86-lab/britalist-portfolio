@@ -3,6 +3,7 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Magnetic } from '../ui/Magnetic';
+import logo from '../../assets/logo.png';
 
 export function Navbar() {
     const [hidden, setHidden] = useState(false);
@@ -32,8 +33,8 @@ export function Navbar() {
                 className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-white/50 dark:bg-stone-950/50 backdrop-blur-md border-b border-stone-200/50 dark:border-stone-800/50 text-stone-900 dark:text-white pointer-events-none transition-colors duration-700"
             >
                 <Magnetic>
-                    <Link to="/" className="block font-display font-bold text-2xl tracking-tighter uppercase pointer-events-auto cursor-pointer p-2 relative z-50">
-                        Grainy Grids
+                    <Link to="/" className="block p-2 relative z-50">
+                        <img src={logo} alt="Grainy Grids" className="h-10 w-auto" />
                     </Link>
                 </Magnetic>
 
